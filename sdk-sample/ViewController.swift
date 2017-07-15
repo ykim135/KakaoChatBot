@@ -19,6 +19,41 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+    @IBAction func actKakaoLink(sender: AnyObject) {
+        let label = KakaoTalkLinkObject.createLabel("Test Label")
+        let image = KakaoTalkLinkObject.createImage(
+            "https://developers.kakao.com/assets/img/link_sample.jpg",
+            width : 130,
+            height : 80
+        )
+        let webLink = KakaoTalkLinkObject.createWebLink("Test Link", url: "http://www.kakao.com")
+        let androidAppAction = KakaoTalkLinkAction.createAppAction(
+            KakaoTalkLinkActionOSPlatform.android,
+            devicetype: KakaoTalkLinkActionDeviceType.phone,
+            execparam: ["test1":"test1", "test2":"test2"]
+        )
+        let iphoneAppAction = KakaoTalkLinkAction.createAppAction(
+            KakaoTalkLinkActionOSPlatform.IOS,
+            devicetype: KakaoTalkLinkActionDeviceType.phone,
+            execparam: ["test1":"test1", "test2":"test2"]
+        )
+        let ipadAppAction = KakaoTalkLinkAction.createAppAction(
+            KakaoTalkLinkActionOSPlatform.IOS,
+            devicetype: KakaoTalkLinkActionDeviceType.pad,
+            execparam: ["test1":"test1", "test2":"test2"]
+        )
+        let appLink = KakaoTalkLinkObject.createAppButton(
+            "Test Button",
+            actions: [androidAppAction!, iphoneAppAction!, ipadAppAction!]
+        )
+        
+        if KOAppCall.canOpenKakaoTalkAppLink() {
+            KOAppCall.openKakaoTalkAppLink([label!, image!, webLink!, appLink!])
+        } else {
+            print("cannot open kakaotalk.")
+        }
+    }
     
     @IBAction func loginKakao(_ sender: UIButton) {
         let session = KOSession.shared()

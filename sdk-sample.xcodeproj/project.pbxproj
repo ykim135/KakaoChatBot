@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6455A7E01F19FF9600A7CBBB /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6455A7DF1F19FF9600A7CBBB /* KakaoOpenSDK.framework */; };
+		6455A7E21F1A078300A7CBBB /* KakaoLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6455A7E11F1A078300A7CBBB /* KakaoLink.framework */; };
+		6455A7E41F1A07BC00A7CBBB /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6455A7E31F1A07BC00A7CBBB /* KakaoCommon.framework */; };
 		646530BC1F1923780076B0A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646530BB1F1923780076B0A9 /* AppDelegate.swift */; };
 		646530BE1F1923780076B0A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646530BD1F1923780076B0A9 /* ViewController.swift */; };
 		646530C11F1923780076B0A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646530BF1F1923780076B0A9 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		6455A7DA1F19D82E00A7CBBB /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
 		6455A7DF1F19FF9600A7CBBB /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		6455A7E11F1A078300A7CBBB /* KakaoLink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoLink.framework; sourceTree = "<group>"; };
+		6455A7E31F1A07BC00A7CBBB /* KakaoCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoCommon.framework; sourceTree = "<group>"; };
 		646530B81F1923780076B0A9 /* sdk-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sdk-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646530BB1F1923780076B0A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646530BD1F1923780076B0A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6455A7E21F1A078300A7CBBB /* KakaoLink.framework in Frameworks */,
+				6455A7E41F1A07BC00A7CBBB /* KakaoCommon.framework in Frameworks */,
 				6455A7E01F19FF9600A7CBBB /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +140,8 @@
 		646530E91F19265F0076B0A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6455A7E31F1A07BC00A7CBBB /* KakaoCommon.framework */,
+				6455A7E11F1A078300A7CBBB /* KakaoLink.framework */,
 				6455A7DF1F19FF9600A7CBBB /* KakaoOpenSDK.framework */,
 			);
 			name = Frameworks;

@@ -10,5 +10,7 @@
 #define Bridging_Header_h
 
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
+#import <KakaoOpenSDK/KakaoTalkLinkAction.h>
+#import <KakaoOpenSDK/KakaoTalkLinkObject.h>
 
 #endif /* Bridging_Header_h */
