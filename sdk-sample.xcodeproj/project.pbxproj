@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6455A7E01F19FF9600A7CBBB /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6455A7DF1F19FF9600A7CBBB /* KakaoOpenSDK.framework */; };
 		646530BC1F1923780076B0A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646530BB1F1923780076B0A9 /* AppDelegate.swift */; };
 		646530BE1F1923780076B0A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646530BD1F1923780076B0A9 /* ViewController.swift */; };
 		646530C11F1923780076B0A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646530BF1F1923780076B0A9 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6455A7DA1F19D82E00A7CBBB /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		6455A7DF1F19FF9600A7CBBB /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		646530B81F1923780076B0A9 /* sdk-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sdk-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646530BB1F1923780076B0A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646530BD1F1923780076B0A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6455A7E01F19FF9600A7CBBB /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 				646530CF1F1923780076B0A9 /* sdk-sampleTests */,
 				646530DA1F1923790076B0A9 /* sdk-sampleUITests */,
 				646530B91F1923780076B0A9 /* Products */,
+				646530E91F19265F0076B0A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +108,7 @@
 				646530C21F1923780076B0A9 /* Assets.xcassets */,
 				646530C41F1923780076B0A9 /* LaunchScreen.storyboard */,
 				646530C71F1923780076B0A9 /* Info.plist */,
+				6455A7DA1F19D82E00A7CBBB /* Bridging_Header.h */,
 			);
 			path = "sdk-sample";
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				646530DD1F1923790076B0A9 /* Info.plist */,
 			);
 			path = "sdk-sampleUITests";
+			sourceTree = "<group>";
+		};
+		646530E91F19265F0076B0A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6455A7DF1F19FF9600A7CBBB /* KakaoOpenSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,26 +428,38 @@
 		646530E11F1923790076B0A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EF89JHTAVU;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "sdk-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kakao.sdk-sample";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.sdk-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/sdk-sample/Bridging_Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Debug;
 		};
 		646530E21F1923790076B0A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EF89JHTAVU;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "sdk-sample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kakao.sdk-sample";
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.sdk-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/sdk-sample/Bridging_Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)";
 			};
 			name = Release;
 		};
@@ -514,6 +540,7 @@
 				646530E21F1923790076B0A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		646530E31F1923790076B0A9 /* Build configuration list for PBXNativeTarget "sdk-sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +549,7 @@
 				646530E51F1923790076B0A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		646530E61F1923790076B0A9 /* Build configuration list for PBXNativeTarget "sdk-sampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +558,7 @@
 				646530E81F1923790076B0A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

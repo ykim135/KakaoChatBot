@@ -19,7 +19,34 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func loginKakao(_ sender: UIButton) {
+        let session = KOSession.shared()
+        
+        if let s = session {
+            if s.isOpen() {
+                s.close()
+            }
+            
+            s.open(completionHandler: { (error) in
+                if error == nil {
+                    print ("No error")
+                    
+                    if s.isOpen() {
+                        print("Success")
+                    }
+                    else {
+                        print("Fail")
+                    }
+                }
+                else {
+                    print("Error login: \(error!)")
+                }
+            })
+        }
+        else {
+            print("Something wrong")
+        }
+    }
 }
 
